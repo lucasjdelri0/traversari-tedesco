@@ -1,36 +1,35 @@
 /* eslint no-undef: 0 */
 /* eslint arrow-parens: 0 */
-import React from "react";
-import { enquireScreen } from "enquire-js";
-import { Button, Input } from "antd";
+import React from 'react';
+import { enquireScreen } from 'enquire-js';
 
-import Nav2 from "./Nav2";
-import Banner3 from "./Banner3";
-import Content8 from "./Content8";
-import Content9 from "./Content9";
-import Content10 from "./Content10";
-import Content11 from "./Content11";
-import Content12 from "./Content12";
-import Footer2 from "./Footer2";
+import Nav2 from './Nav2';
+import Banner2 from './Banner2';
+import Feature3 from './Feature3';
+import Feature0 from './Feature0';
+import Content9 from './Content9';
+import Content13 from './Content13';
+import Content12 from './Content12';
+import Footer1 from './Footer1';
 
 import {
   Nav20DataSource,
-  Banner30DataSource,
-  Content80DataSource,
+  Banner20DataSource,
+  Feature30DataSource,
+  Feature00DataSource,
   Content90DataSource,
-  Content100DataSource,
-  Content110DataSource,
+  Content130DataSource,
   Content120DataSource,
-  Footer20DataSource,
-} from "./data.source";
-import "./less/antMotionStyle.less";
+  Footer10DataSource,
+} from './data.source';
+import './less/antMotionStyle.less';
 
 let isMobile;
 enquireScreen((b) => {
   isMobile = b;
 });
 
-const { location = {} } = typeof window !== "undefined" ? window : {};
+const { location = {} } = typeof window !== 'undefined' ? window : {};
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -67,16 +66,22 @@ export default class Home extends React.Component {
         dataSource={Nav20DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Banner3
-        id="Banner3_0"
-        key="Banner3_0"
-        dataSource={Banner30DataSource}
+      <Banner2
+        id="Banner2_0"
+        key="Banner2_0"
+        dataSource={Banner20DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content8
-        id="Content8_0"
-        key="Content8_0"
-        dataSource={Content80DataSource}
+      <Feature3
+        id="Feature3_0"
+        key="Feature3_0"
+        dataSource={Feature30DataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Feature0
+        id="Feature0_0"
+        key="Feature0_0"
+        dataSource={Feature00DataSource}
         isMobile={this.state.isMobile}
       />,
       <Content9
@@ -85,16 +90,10 @@ export default class Home extends React.Component {
         dataSource={Content90DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content10
-        id="Content10_0"
-        key="Content10_0"
-        dataSource={Content100DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Content11
-        id="Content11_0"
-        key="Content11_0"
-        dataSource={Content110DataSource}
+      <Content13
+        id="Content13_0"
+        key="Content13_0"
+        dataSource={Content130DataSource}
         isMobile={this.state.isMobile}
       />,
       <Content12
@@ -103,10 +102,10 @@ export default class Home extends React.Component {
         dataSource={Content120DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Footer2
-        id="Footer2_0"
-        key="Footer2_0"
-        dataSource={Footer20DataSource}
+      <Footer1
+        id="Footer1_0"
+        key="Footer1_0"
+        dataSource={Footer10DataSource}
         isMobile={this.state.isMobile}
       />,
     ];

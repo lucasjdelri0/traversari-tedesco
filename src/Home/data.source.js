@@ -1,78 +1,88 @@
-import React from 'react';
+import React from "react";
+import { Input, Button, Row, Col } from "antd";
+import {
+  MailOutlined,
+  IdcardOutlined,
+  UserOutlined,
+  PhoneOutlined,
+} from "@ant-design/icons";
+
+const { TextArea } = Input;
+
 export const Nav20DataSource = {
   isScrollLink: true,
-  wrapper: { className: 'header2 home-page-wrapper jrhtw9ph4a-editor_css' },
-  page: { className: 'home-page l4lj6en6d8i-editor_css' },
+  wrapper: { className: "header2 home-page-wrapper jrhtw9ph4a-editor_css" },
+  page: { className: "home-page l4lj6en6d8i-editor_css" },
   logo: {
-    className: 'header2-logo',
+    className: "header2-logo",
     children:
-      'https://gw.alipayobjects.com/os/s/prod/seeconf/9b458a789d9a000312899b42a7542b9c.svg',
+      "https://gw.alipayobjects.com/os/s/prod/seeconf/9b458a789d9a000312899b42a7542b9c.svg",
   },
   LinkMenu: {
-    className: 'header2-menu',
+    className: "header2-menu",
     children: [
       {
-        name: 'linkNav',
-        to: '当前页面 ID 地址，参考如上',
-        children: '',
-        className: 'menu-item',
+        name: "linkNav",
+        to: "当前页面 ID 地址，参考如上",
+        children: "",
+        className: "menu-item",
       },
     ],
   },
-  mobileMenu: { className: 'header2-mobile-menu' },
+  mobileMenu: { className: "header2-mobile-menu" },
   Menu: {
     children: [
       {
-        name: 'Banner3_0',
-        to: 'Banner3_0',
-        children: '首页',
-        className: 'active menu-item',
+        name: "Banner3_0",
+        to: "Banner3_0",
+        children: "首页",
+        className: "active menu-item",
       },
       {
-        name: 'Content8_0',
-        to: 'Content8_0',
-        children: '特邀嘉宾',
-        className: 'menu-item',
+        name: "Content8_0",
+        to: "Content8_0",
+        children: "特邀嘉宾",
+        className: "menu-item",
       },
       {
-        name: 'Content9_0',
-        to: 'Content9_0',
-        children: '会议日程',
-        className: 'menu-item',
+        name: "Content9_0",
+        to: "Content9_0",
+        children: "会议日程",
+        className: "menu-item",
       },
       {
-        name: 'Content10_0',
-        to: 'Content10_0',
-        children: '大会地址',
-        className: 'menu-item',
+        name: "Content10_0",
+        to: "Content10_0",
+        children: "大会地址",
+        className: "menu-item",
       },
       {
-        name: 'Content11_0',
-        to: 'Content11_0',
-        children: '展台展示',
-        className: 'menu-item',
+        name: "Content11_0",
+        to: "Content11_0",
+        children: "展台展示",
+        className: "menu-item",
       },
       {
-        name: 'Content12_0',
-        to: 'Content12_0',
-        children: '特别鸣谢',
-        className: 'menu-item',
+        name: "Content12_0",
+        to: "Content12_0",
+        children: "特别鸣谢",
+        className: "menu-item",
       },
     ],
   },
 };
 export const Banner20DataSource = {
-  wrapper: { className: 'banner2' },
+  wrapper: { className: "banner2" },
   BannerAnim: {
     children: [
       {
-        name: 'elem0',
-        BannerElement: { className: 'banner-user-elem' },
-        page: { className: 'home-page banner2-page' },
-        textWrapper: { className: 'banner2-text-wrapper' },
-        bg: { className: 'bg bg0' },
+        name: "elem0",
+        BannerElement: { className: "banner-user-elem" },
+        page: { className: "home-page banner2-page" },
+        textWrapper: { className: "banner2-text-wrapper" },
+        bg: { className: "bg bg0" },
         title: {
-          className: 'banner2-title l4ljbzl6n3u-editor_css',
+          className: "banner2-title l4ljbzl6n3u-editor_css",
           children: (
             <span>
               <span>
@@ -81,11 +91,7 @@ export const Banner20DataSource = {
                     <span>
                       <span>
                         <p>
-                          <b>
-                            Traversari&nbsp;<span>
-                              Tedesco
-                            </span>
-                          </b>
+                          <b>Mario Tedesco</b>
                         </p>
                       </span>
                     </span>
@@ -96,7 +102,7 @@ export const Banner20DataSource = {
           ),
         },
         content: {
-          className: 'banner2-content l4lkvmx7zlr-editor_css',
+          className: "banner2-content l4lkvmx7zlr-editor_css",
           children: (
             <span>
               <span>
@@ -121,7 +127,7 @@ export const Banner20DataSource = {
           ),
         },
         button: {
-          className: 'banner2-button',
+          className: "banner2-button",
           children: (
             <span>
               <span>
@@ -133,21 +139,21 @@ export const Banner20DataSource = {
               </span>
             </span>
           ),
-          href: '',
+          href: "",
         },
       },
     ],
   },
 };
 export const Feature30DataSource = {
-  wrapper: { className: 'home-page-wrapper content3-wrapper' },
-  page: { className: 'home-page content3' },
+  wrapper: { className: "home-page-wrapper content3-wrapper" },
+  page: { className: "home-page content3" },
   OverPack: { playScale: 0.3 },
   titleWrapper: {
-    className: 'title-wrapper',
+    className: "title-wrapper",
     children: [
       {
-        name: 'title',
+        name: "title",
         children: (
           <span>
             <span>
@@ -161,10 +167,10 @@ export const Feature30DataSource = {
                             <p>
                               Nuestro bufete se especializa en solicitudes de
                               reconocimiento de ciudadanía italiana por
-                              descendencia, los llamados{' '}
+                              descendencia, los llamados{" "}
                               <i>
                                 <b>"Iure Sanguinis"</b>
-                              </i>{' '}
+                              </i>{" "}
                               para los descendientes de antepasados italianos
                               que emigraron al extranjero.
                             </p>
@@ -178,11 +184,11 @@ export const Feature30DataSource = {
             </span>
           </span>
         ),
-        className: 'title-h1 l4ldeprccr-editor_css',
+        className: "title-h1 l4ldeprccr-editor_css",
       },
       {
-        name: 'content',
-        className: 'title-content l4ldf7hm0gg-editor_css',
+        name: "content",
+        className: "title-content l4ldf7hm0gg-editor_css",
         children: (
           <span>
             <span>
@@ -202,22 +208,22 @@ export const Feature30DataSource = {
     ],
   },
   block: {
-    className: 'content3-block-wrapper',
+    className: "content3-block-wrapper",
     children: [
       {
-        name: 'block0',
-        className: 'content3-block',
+        name: "block0",
+        className: "content3-block",
         md: 8,
         xs: 24,
         children: {
           icon: {
-            className: 'content3-icon',
+            className: "content3-icon",
             children:
-              'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png',
+              "https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png",
           },
-          textWrapper: { className: 'content3-text' },
+          textWrapper: { className: "content3-text" },
           title: {
-            className: 'content3-title',
+            className: "content3-title",
             children: (
               <span>
                 <p>Búsqueda de alojamiento </p>
@@ -225,7 +231,7 @@ export const Feature30DataSource = {
             ),
           },
           content: {
-            className: 'content3-content',
+            className: "content3-content",
             children: (
               <span>
                 <span>
@@ -240,19 +246,19 @@ export const Feature30DataSource = {
         },
       },
       {
-        name: 'block1',
-        className: 'content3-block',
+        name: "block1",
+        className: "content3-block",
         md: 8,
         xs: 24,
         children: {
           icon: {
-            className: 'content3-icon',
+            className: "content3-icon",
             children:
-              'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
+              "https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png",
           },
-          textWrapper: { className: 'content3-text' },
+          textWrapper: { className: "content3-text" },
           title: {
-            className: 'content3-title',
+            className: "content3-title",
             children: (
               <span>
                 <p>Búsqueda de documentos</p>
@@ -260,7 +266,7 @@ export const Feature30DataSource = {
             ),
           },
           content: {
-            className: 'content3-content',
+            className: "content3-content",
             children: (
               <span>
                 <p>
@@ -273,19 +279,19 @@ export const Feature30DataSource = {
         },
       },
       {
-        name: 'block2',
-        className: 'content3-block',
+        name: "block2",
+        className: "content3-block",
         md: 8,
         xs: 24,
         children: {
           icon: {
-            className: 'content3-icon',
+            className: "content3-icon",
             children:
-              'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
+              "https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png",
           },
-          textWrapper: { className: 'content3-text' },
+          textWrapper: { className: "content3-text" },
           title: {
-            className: 'content3-title',
+            className: "content3-title",
             children: (
               <span>
                 <span>
@@ -295,7 +301,7 @@ export const Feature30DataSource = {
             ),
           },
           content: {
-            className: 'content3-content',
+            className: "content3-content",
             children: (
               <span>
                 <span>
@@ -311,19 +317,19 @@ export const Feature30DataSource = {
         },
       },
       {
-        name: 'block3',
-        className: 'content3-block',
+        name: "block3",
+        className: "content3-block",
         md: 8,
         xs: 24,
         children: {
           icon: {
-            className: 'content3-icon',
+            className: "content3-icon",
             children:
-              'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
+              "https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png",
           },
-          textWrapper: { className: 'content3-text' },
+          textWrapper: { className: "content3-text" },
           title: {
-            className: 'content3-title',
+            className: "content3-title",
             children: (
               <span>
                 <span>
@@ -335,7 +341,7 @@ export const Feature30DataSource = {
             ),
           },
           content: {
-            className: 'content3-content',
+            className: "content3-content",
             children: (
               <span>
                 <span>
@@ -351,19 +357,19 @@ export const Feature30DataSource = {
         },
       },
       {
-        name: 'block4',
-        className: 'content3-block',
+        name: "block4",
+        className: "content3-block",
         md: 8,
         xs: 24,
         children: {
           icon: {
-            className: 'content3-icon',
+            className: "content3-icon",
             children:
-              'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
+              "https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png",
           },
-          textWrapper: { className: 'content3-text' },
+          textWrapper: { className: "content3-text" },
           title: {
-            className: 'content3-title',
+            className: "content3-title",
             children: (
               <span>
                 <span>
@@ -375,7 +381,7 @@ export const Feature30DataSource = {
             ),
           },
           content: {
-            className: 'content3-content',
+            className: "content3-content",
             children: (
               <span>
                 <p>
@@ -391,19 +397,19 @@ export const Feature30DataSource = {
         },
       },
       {
-        name: 'block5',
-        className: 'content3-block',
+        name: "block5",
+        className: "content3-block",
         md: 8,
         xs: 24,
         children: {
           icon: {
-            className: 'content3-icon',
+            className: "content3-icon",
             children:
-              'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
+              "https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png",
           },
-          textWrapper: { className: 'content3-text' },
+          textWrapper: { className: "content3-text" },
           title: {
-            className: 'content3-title',
+            className: "content3-title",
             children: (
               <span>
                 <span>
@@ -413,7 +419,7 @@ export const Feature30DataSource = {
             ),
           },
           content: {
-            className: 'content3-content',
+            className: "content3-content",
             children: (
               <span>
                 <p>
@@ -429,14 +435,14 @@ export const Feature30DataSource = {
   },
 };
 export const Feature00DataSource = {
-  wrapper: { className: 'home-page-wrapper content0-wrapper' },
-  page: { className: 'home-page content0' },
-  OverPack: { playScale: 0.3, className: '' },
+  wrapper: { className: "home-page-wrapper content0-wrapper" },
+  page: { className: "home-page content0" },
+  OverPack: { playScale: 0.3, className: "" },
   titleWrapper: {
-    className: 'title-wrapper',
+    className: "title-wrapper",
     children: [
       {
-        name: 'title',
+        name: "title",
         children: (
           <span>
             <span>
@@ -452,25 +458,25 @@ export const Feature00DataSource = {
     ],
   },
   childWrapper: {
-    className: 'content0-block-wrapper',
+    className: "content0-block-wrapper",
     children: [
       {
-        name: 'block0',
-        className: 'content0-block',
+        name: "block0",
+        className: "content0-block",
         md: 8,
         xs: 24,
         children: {
-          className: 'content0-block-item',
+          className: "content0-block-item",
           children: [
             {
-              name: 'image',
-              className: 'content0-block-icon',
+              name: "image",
+              className: "content0-block-icon",
               children:
-                'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
+                "https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png",
             },
             {
-              name: 'title',
-              className: 'content0-block-title',
+              name: "title",
+              className: "content0-block-title",
               children: (
                 <span>
                   <p>Descendencia de una persona italiana</p>
@@ -478,7 +484,7 @@ export const Feature00DataSource = {
               ),
             },
             {
-              name: 'content',
+              name: "content",
               children: (
                 <span>
                   <span>
@@ -486,7 +492,8 @@ export const Feature00DataSource = {
                       Tanto el ascendiente como sus descendientes no deben
                       haberse naturalizado ciudadanos extranjeros antes del
                       nacimiento de sus respectivos descendientes y hasta los
-                      solicitantes.<br />
+                      solicitantes.
+                      <br />
                       <br />
                     </p>
                   </span>
@@ -497,22 +504,22 @@ export const Feature00DataSource = {
         },
       },
       {
-        name: 'block1',
-        className: 'content0-block',
+        name: "block1",
+        className: "content0-block",
         md: 8,
         xs: 24,
         children: {
-          className: 'content0-block-item',
+          className: "content0-block-item",
           children: [
             {
-              name: 'image',
-              className: 'content0-block-icon',
+              name: "image",
+              className: "content0-block-icon",
               children:
-                'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
+                "https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png",
             },
             {
-              name: 'title',
-              className: 'content0-block-title',
+              name: "title",
+              className: "content0-block-title",
               children: (
                 <span>
                   <span>
@@ -522,7 +529,7 @@ export const Feature00DataSource = {
               ),
             },
             {
-              name: 'content',
+              name: "content",
               children: (
                 <span>
                   <span>
@@ -543,22 +550,22 @@ export const Feature00DataSource = {
         },
       },
       {
-        name: 'block2',
-        className: 'content0-block',
+        name: "block2",
+        className: "content0-block",
         md: 8,
         xs: 24,
         children: {
-          className: 'content0-block-item',
+          className: "content0-block-item",
           children: [
             {
-              name: 'image',
-              className: 'content0-block-icon',
+              name: "image",
+              className: "content0-block-icon",
               children:
-                'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
+                "https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png",
             },
             {
-              name: 'title',
-              className: 'content0-block-title',
+              name: "title",
+              className: "content0-block-title",
               children: (
                 <span>
                   <span>
@@ -568,7 +575,7 @@ export const Feature00DataSource = {
               ),
             },
             {
-              name: 'content',
+              name: "content",
               children: (
                 <span>
                   <p>---</p>
@@ -582,19 +589,19 @@ export const Feature00DataSource = {
   },
 };
 export const Content90DataSource = {
-  wrapper: { className: 'home-page-wrapper content9-wrapper' },
-  page: { className: 'home-page content9' },
+  wrapper: { className: "home-page-wrapper content9-wrapper" },
+  page: { className: "home-page content9" },
   titleWrapper: {
-    className: 'title-wrapper',
+    className: "title-wrapper",
     children: [
       {
-        name: 'image',
+        name: "image",
         children:
-          'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
-        className: 'title-image',
+          "https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg",
+        className: "title-image",
       },
       {
-        name: 'title',
+        name: "title",
         children: (
           <span>
             <span>
@@ -608,15 +615,18 @@ export const Content90DataSource = {
                             Italia es la única nación que permite a los
                             descendientes de antepasados italianos que emigraron
                             al extranjero la posibilidad de obtener el
-                            reconocimiento de la ciudadanía italiana{' '}
+                            reconocimiento de la ciudadanía italiana{" "}
                             <b>
                               <i>iure sanguinis</i>
-                            </b>{' '}
-                            sin límite generacional alguno.<br />Reconocimiento
-                            que se obtiene presentando toda la documentación
-                            necesaria - actas de nacimiento, matrimonio y
-                            defunción, comenzando por el ascendiente italiano y
-                            gradualmente hasta los solicitantes.<br />
+                            </b>{" "}
+                            sin límite generacional alguno.
+                            <br />
+                            Reconocimiento que se obtiene presentando toda la
+                            documentación necesaria - actas de nacimiento,
+                            matrimonio y defunción, comenzando por el
+                            ascendiente italiano y gradualmente hasta los
+                            solicitantes.
+                            <br />
                           </p>
                         </span>
                       </span>
@@ -627,32 +637,32 @@ export const Content90DataSource = {
             </span>
           </span>
         ),
-        className: 'title-h1 l4lf2dnebee-editor_css',
+        className: "title-h1 l4lf2dnebee-editor_css",
       },
     ],
   },
   block: {
-    className: 'timeline l4lghhtltd-editor_css',
+    className: "timeline l4lghhtltd-editor_css",
     children: [
       {
-        name: 'block0',
-        className: 'block-wrapper',
+        name: "block0",
+        className: "block-wrapper",
         playScale: 0.3,
         children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
+          imgWrapper: { className: "image-wrapper" },
+          textWrapper: { className: "text-wrapper" },
           img: {
-            className: 'block-img',
+            className: "block-img",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png',
+              "https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png",
           },
           icon: {
-            className: 'block-icon',
+            className: "block-icon",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/qJnGrvjXPxdKETlVSrbe.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/qJnGrvjXPxdKETlVSrbe.svg",
           },
           name: {
-            className: 'block-name',
+            className: "block-name",
             children: (
               <span>
                 <span>
@@ -680,7 +690,7 @@ export const Content90DataSource = {
             ),
           },
           post: {
-            className: 'block-post',
+            className: "block-post",
             children: (
               <span>
                 <span>
@@ -698,7 +708,7 @@ export const Content90DataSource = {
             ),
           },
           time: {
-            className: 'block-time',
+            className: "block-time",
             children: (
               <span>
                 <span>
@@ -718,7 +728,7 @@ export const Content90DataSource = {
             ),
           },
           title: {
-            className: 'block-title',
+            className: "block-title",
             children: (
               <span>
                 <span>
@@ -751,10 +761,12 @@ export const Content90DataSource = {
                                                                       ¿Via
                                                                       judicial o
                                                                       via
-                                                                      Administrativa?<br />
+                                                                      Administrativa?
+                                                                      <br />
                                                                     </b>
-                                                                    <br />Depende
-                                                                    del género y
+                                                                    <br />
+                                                                    Depende del
+                                                                    género y
                                                                     fecha de
                                                                     nacimiento
                                                                     del
@@ -789,28 +801,28 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          content: { className: 'block-content', children: '' },
+          content: { className: "block-content", children: "" },
         },
       },
       {
-        name: 'block1',
-        className: 'block-wrapper',
+        name: "block1",
+        className: "block-wrapper",
         playScale: 0.3,
         children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
+          imgWrapper: { className: "image-wrapper" },
+          textWrapper: { className: "text-wrapper" },
           img: {
-            className: 'block-img',
+            className: "block-img",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png',
+              "https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png",
           },
           icon: {
-            className: 'block-icon',
+            className: "block-icon",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg",
           },
           name: {
-            className: 'block-name l4ll8dvk68c-editor_css',
+            className: "block-name l4ll8dvk68c-editor_css",
             children: (
               <span>
                 <span>
@@ -831,7 +843,7 @@ export const Content90DataSource = {
             ),
           },
           post: {
-            className: 'block-post l4ll8kkelb-editor_css',
+            className: "block-post l4ll8kkelb-editor_css",
             children: (
               <span>
                 <span>
@@ -841,7 +853,8 @@ export const Content90DataSource = {
                         <span>
                           <p>
                             La persona de descendencia italiana es de género
-                            masculino<br />
+                            masculino
+                            <br />
                           </p>
                         </span>
                       </span>
@@ -852,7 +865,7 @@ export const Content90DataSource = {
             ),
           },
           time: {
-            className: 'block-time',
+            className: "block-time",
             children: (
               <span>
                 <span>
@@ -864,7 +877,7 @@ export const Content90DataSource = {
             ),
           },
           title: {
-            className: 'block-title',
+            className: "block-title",
             children: (
               <span>
                 <span>
@@ -888,7 +901,7 @@ export const Content90DataSource = {
             ),
           },
           content: {
-            className: 'block-content l4ll8ujdsb-editor_css',
+            className: "block-content l4ll8ujdsb-editor_css",
             children: (
               <span>
                 <span>
@@ -923,42 +936,43 @@ export const Content90DataSource = {
         },
       },
       {
-        name: 'block2',
-        className: 'block-wrapper',
+        name: "block2",
+        className: "block-wrapper",
         playScale: 0.3,
         children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
+          imgWrapper: { className: "image-wrapper" },
+          textWrapper: { className: "text-wrapper" },
           img: {
-            className: 'block-img',
+            className: "block-img",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png',
+              "https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png",
           },
           icon: {
-            className: 'block-icon',
+            className: "block-icon",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg",
           },
           name: {
-            className: 'block-name l4ll98masw-editor_css',
+            className: "block-name l4ll98masw-editor_css",
             children: (
               <span>
                 <span>
                   <p>
                     <b>Con la existencia</b> de una mujer en tu linea de
-                    ascendencia<br />
+                    ascendencia
+                    <br />
                   </p>
                 </span>
               </span>
             ),
           },
           post: {
-            className: 'block-post',
+            className: "block-post",
             children: (
               <span>
                 <span>
                   <p>
-                    Nacimiento de la primera mujer de la linea{' '}
+                    Nacimiento de la primera mujer de la linea{" "}
                     <b>antes del 1/1/1948</b>
                     <br />
                   </p>
@@ -967,13 +981,14 @@ export const Content90DataSource = {
             ),
           },
           time: {
-            className: 'block-time',
+            className: "block-time",
             children: (
               <span>
                 <span>
                   <span>
                     <p>
-                      Nacimiento antes del 1/1/1948<br />
+                      Nacimiento antes del 1/1/1948
+                      <br />
                     </p>
                   </span>
                 </span>
@@ -981,7 +996,7 @@ export const Content90DataSource = {
             ),
           },
           title: {
-            className: 'block-title',
+            className: "block-title",
             children: (
               <span>
                 <span>
@@ -997,7 +1012,7 @@ export const Content90DataSource = {
             ),
           },
           content: {
-            className: 'block-content l4lj0at4nh-editor_css',
+            className: "block-content l4lj0at4nh-editor_css",
             children: (
               <span>
                 <span>
@@ -1007,7 +1022,8 @@ export const Content90DataSource = {
                         <p>
                           La solicitud de reconocimiento de la ciudadanía
                           italiana iure sanguinis se presenta mediante un
-                          procedimiento judicial especifico.<br />
+                          procedimiento judicial especifico.
+                          <br />
                         </p>
                       </span>
                     </span>
@@ -1019,24 +1035,24 @@ export const Content90DataSource = {
         },
       },
       {
-        name: 'block3',
-        className: 'block-wrapper',
+        name: "block3",
+        className: "block-wrapper",
         playScale: 0.3,
         children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
+          imgWrapper: { className: "image-wrapper" },
+          textWrapper: { className: "text-wrapper" },
           img: {
-            className: 'block-img',
+            className: "block-img",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png',
+              "https://gw.alipayobjects.com/zos/rmsportal/SlFgHDtOTLzccvFrQHLg.png",
           },
           icon: {
-            className: 'block-icon',
+            className: "block-icon",
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg",
           },
           name: {
-            className: 'block-name l4ll9dg43eg-editor_css',
+            className: "block-name l4ll9dg43eg-editor_css",
             children: (
               <span>
                 <p>
@@ -1047,18 +1063,18 @@ export const Content90DataSource = {
             ),
           },
           post: {
-            className: 'block-post',
+            className: "block-post",
             children: (
               <span>
                 <p>
-                  Nacimiento de la primera mujer de la linea{' '}
+                  Nacimiento de la primera mujer de la linea{" "}
                   <b>después del 1/1/1948</b>
                 </p>
               </span>
             ),
           },
           time: {
-            className: 'block-time',
+            className: "block-time",
             children: (
               <span>
                 <p>Nacimiento después del 1/1/1948</p>
@@ -1066,7 +1082,7 @@ export const Content90DataSource = {
             ),
           },
           title: {
-            className: 'block-title',
+            className: "block-title",
             children: (
               <span>
                 <span>
@@ -1078,7 +1094,7 @@ export const Content90DataSource = {
             ),
           },
           content: {
-            className: 'block-content l4ll9lga0k9-editor_css',
+            className: "block-content l4ll9lga0k9-editor_css",
             children: (
               <span>
                 <p>
@@ -1104,36 +1120,38 @@ export const Content90DataSource = {
 };
 export const Content130DataSource = {
   OverPack: {
-    className: 'home-page-wrapper content13-wrapper',
+    className: "home-page-wrapper content13-wrapper",
     playScale: 0.3,
   },
   titleWrapper: {
-    className: 'title-wrapper',
+    className: "title-wrapper",
     children: [
       {
-        name: 'image',
+        name: "image",
         children:
-          'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
-        className: 'title-image',
+          "https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg",
+        className: "title-image",
       },
       {
-        name: 'title',
+        name: "title",
         children: (
           <span>
             <span>
               <span>
                 <p>
                   Si está buscando un abogado para llevar a cabo su práctica de
-                  ciudadanía<br />&nbsp;¡está en el lugar correcto!{' '}
+                  ciudadanía
+                  <br />
+                  &nbsp;¡está en el lugar correcto!{" "}
                 </p>
               </span>
             </span>
           </span>
         ),
-        className: 'title-h1 l4lhz2hyflb-editor_css',
+        className: "title-h1 l4lhz2hyflb-editor_css",
       },
       {
-        name: 'content',
+        name: "content",
         children: (
           <span>
             <span>
@@ -1144,10 +1162,10 @@ export const Content130DataSource = {
             </span>
           </span>
         ),
-        className: 'title-content',
+        className: "title-content",
       },
       {
-        name: 'content2',
+        name: "content2",
         children: (
           <span>
             <p>
@@ -1156,26 +1174,129 @@ export const Content130DataSource = {
             </p>
           </span>
         ),
-        className: 'title-content',
+        className: "title-content",
       },
+      {
+        name: "frm-contact",
+        children: (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Input
+                placeholder="Nombre(s)"
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                allowClear
+                style={{ marginBottom: 16, marginRight: 8 }}
+                // suffix={
+                //   <Tooltip title="Extra information">
+                //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                //   </Tooltip>
+                // }
+                required
+              />
+              <Input
+                placeholder="Apellido(s)"
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                allowClear
+                style={{ marginBottom: 16 }}
+                // suffix={
+                //   <Tooltip title="Extra information">
+                //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                //   </Tooltip>
+                // }
+                required
+              />
+            </div>
+            <Input
+              placeholder="Correo"
+              prefix={<MailOutlined className="site-form-item-icon" />}
+              allowClear
+              style={{ marginBottom: 16 }}
+              type="email"
+              // suffix={
+              //   <Tooltip title="Extra information">
+              //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+              //   </Tooltip>
+              // }
+              required
+            />
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Input
+                placeholder="Nacionalidad"
+                prefix={<IdcardOutlined className="site-form-item-icon" />}
+                allowClear
+                style={{ marginBottom: 16, marginRight: 8 }}
+                // suffix={
+                //   <Tooltip title="Extra information">
+                //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                //   </Tooltip>
+                // }
+                required
+              />
+              <Input
+                placeholder="Telefono"
+                prefix={<PhoneOutlined />}
+                allowClear
+                style={{ marginBottom: 16 }}
+                // suffix={
+                //   <Tooltip title="Extra information">
+                //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                //   </Tooltip>
+                // }
+                required
+              />
+            </div>
+            <TextArea
+              rows={4}
+              placeholder="Mensaje"
+              maxLength={300}
+              showCount
+              style={{ marginBottom: 16 }}
+              required
+            />
+            <Button
+              type="primary"
+              onClick={() =>
+                window.open(
+                  "mailto:lucasjdelrio@gmail.com?subject=Holis&body=Hey men"
+                )
+              }
+            >
+              Enviar
+            </Button>
+          </div>
+        ),
+        className: "title-content",
+      },
+      // {
+      //   name: "submit",
+      //   children: (
+      //     <span>
+      //       <p>
+      //         . Elegiremos la mejor vía, extrajudicial o judicial, para que se
+      //         reconozcan sus derechos.
+      //       </p>
+      //     </span>
+      //   ),
+      //   className: "title-content",
+      // },
     ],
   },
 };
 export const Content120DataSource = {
-  wrapper: { className: 'home-page-wrapper content12-wrapper' },
-  page: { className: 'home-page content12' },
-  OverPack: { playScale: 0.3, className: '' },
+  wrapper: { className: "home-page-wrapper content12-wrapper" },
+  page: { className: "home-page content12" },
+  OverPack: { playScale: 0.3, className: "" },
   titleWrapper: {
-    className: 'title-wrapper',
+    className: "title-wrapper",
     children: [
       {
-        name: 'image',
+        name: "image",
         children:
-          'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
-        className: 'title-image',
+          "https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg",
+        className: "title-image",
       },
       {
-        name: 'title',
+        name: "title",
         children: (
           <span>
             <span>
@@ -1193,88 +1314,88 @@ export const Content120DataSource = {
             </span>
           </span>
         ),
-        className: 'title-h1 l4lib2p6d6-editor_css',
+        className: "title-h1 l4lib2p6d6-editor_css",
       },
     ],
   },
   block: {
-    className: 'img-wrapper',
+    className: "img-wrapper",
     children: [
       {
-        name: 'block0',
-        className: 'block',
+        name: "block0",
+        className: "block",
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
+          wrapper: { className: "block-content" },
           img: {
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/TFicUVisNHTOEeMYXuQF.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/TFicUVisNHTOEeMYXuQF.svg",
           },
         },
       },
       {
-        name: 'block1',
-        className: 'block',
+        name: "block1",
+        className: "block",
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
+          wrapper: { className: "block-content" },
           img: {
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/hkLGkrlCEkGZeMQlnEkD.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/hkLGkrlCEkGZeMQlnEkD.svg",
           },
         },
       },
       {
-        name: 'block2',
-        className: 'block',
+        name: "block2",
+        className: "block",
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
+          wrapper: { className: "block-content" },
           img: {
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/bqyPRSZmhvrsfJrBvASi.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/bqyPRSZmhvrsfJrBvASi.svg",
           },
         },
       },
       {
-        name: 'block3',
-        className: 'block',
+        name: "block3",
+        className: "block",
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
+          wrapper: { className: "block-content" },
           img: {
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/UcsyszzOabdCYDkoPPnM.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/UcsyszzOabdCYDkoPPnM.svg",
           },
         },
       },
       {
-        name: 'block4',
-        className: 'block',
+        name: "block4",
+        className: "block",
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
+          wrapper: { className: "block-content" },
           img: {
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/kRBeaICGexAmVjqBEqgw.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/kRBeaICGexAmVjqBEqgw.svg",
           },
         },
       },
       {
-        name: 'block5',
-        className: 'block',
+        name: "block5",
+        className: "block",
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
+          wrapper: { className: "block-content" },
           img: {
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/ftBIiyJcCHpHEioRvPsV.svg',
+              "https://gw.alipayobjects.com/zos/rmsportal/ftBIiyJcCHpHEioRvPsV.svg",
           },
         },
       },
@@ -1282,27 +1403,27 @@ export const Content120DataSource = {
   },
 };
 export const Footer10DataSource = {
-  wrapper: { className: 'home-page-wrapper footer1-wrapper' },
-  OverPack: { className: 'footer1', playScale: 0.2 },
+  wrapper: { className: "home-page-wrapper footer1-wrapper" },
+  OverPack: { className: "footer1", playScale: 0.2 },
   block: {
-    className: 'home-page',
+    className: "home-page",
     gutter: 0,
     children: [
       {
-        name: 'block0',
+        name: "block0",
         xs: 24,
         md: 6,
-        className: 'block',
+        className: "block",
         title: {
-          className: 'logo',
+          className: "logo",
           children:
-            'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
+            "https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg",
         },
         childWrapper: {
-          className: 'slogan',
+          className: "slogan",
           children: [
             {
-              name: 'content0',
+              name: "content0",
               children: (
                 <span>
                   <span>
@@ -1317,10 +1438,10 @@ export const Footer10DataSource = {
         },
       },
       {
-        name: 'block1',
+        name: "block1",
         xs: 24,
         md: 6,
-        className: 'block',
+        className: "block",
         title: {
           children: (
             <span>
@@ -1333,8 +1454,8 @@ export const Footer10DataSource = {
         childWrapper: {
           children: [
             {
-              name: 'link0',
-              href: '#',
+              name: "link0",
+              href: "#",
               children: (
                 <span>
                   <span>
@@ -1346,8 +1467,8 @@ export const Footer10DataSource = {
               ),
             },
             {
-              name: 'link1',
-              href: '#',
+              name: "link1",
+              href: "#",
               children: (
                 <span>
                   <p>
@@ -1357,8 +1478,8 @@ export const Footer10DataSource = {
               ),
             },
             {
-              name: 'link2',
-              href: '#',
+              name: "link2",
+              href: "#",
               children: (
                 <span>
                   <span>
@@ -1372,8 +1493,8 @@ export const Footer10DataSource = {
               ),
             },
             {
-              name: 'link3',
-              href: '#',
+              name: "link3",
+              href: "#",
               children: (
                 <span>
                   <p>
@@ -1386,10 +1507,10 @@ export const Footer10DataSource = {
         },
       },
       {
-        name: 'block2',
+        name: "block2",
         xs: 24,
         md: 6,
-        className: 'block',
+        className: "block",
         title: {
           children: (
             <span>
@@ -1400,8 +1521,8 @@ export const Footer10DataSource = {
         childWrapper: {
           children: [
             {
-              href: '#',
-              name: 'link0',
+              href: "#",
+              name: "link0",
               children: (
                 <span>
                   <p>Via Medina, P.za Municipio, 37/38/39, 80133 Napoli NA</p>
@@ -1409,8 +1530,8 @@ export const Footer10DataSource = {
               ),
             },
             {
-              href: '#',
-              name: 'link1',
+              href: "#",
+              name: "link1",
               children: (
                 <span>
                   <p>
@@ -1423,10 +1544,10 @@ export const Footer10DataSource = {
         },
       },
       {
-        name: 'block3',
+        name: "block3",
         xs: 24,
         md: 6,
-        className: 'block',
+        className: "block",
         title: {
           children: (
             <span>
@@ -1437,8 +1558,8 @@ export const Footer10DataSource = {
         childWrapper: {
           children: [
             {
-              href: '#',
-              name: 'link0',
+              href: "#",
+              name: "link0",
               children: (
                 <span>
                   <p>+39 329 1379462</p>
@@ -1446,24 +1567,24 @@ export const Footer10DataSource = {
               ),
             },
             {
-              href: 'https://www.instagram.com/tanos_italia/',
-              name: 'link1',
+              href: "https://www.instagram.com/tanos_italia/",
+              name: "link1",
               children: (
                 <span>
                   <p>Tanos Argentina</p>
                 </span>
               ),
-              target: '_blank',
+              target: "_blank",
             },
           ],
         },
       },
     ],
   },
-  copyrightWrapper: { className: 'copyright-wrapper' },
-  copyrightPage: { className: 'home-page' },
+  copyrightWrapper: { className: "copyright-wrapper" },
+  copyrightPage: { className: "home-page" },
   copyright: {
-    className: 'copyright',
+    className: "copyright",
     children: (
       <span>
         <span>

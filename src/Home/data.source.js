@@ -1,4 +1,14 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
+import { Button } from "antd";
+import i18n from "../i18n";
+
+const changeLanguage = lng => {
+  i18n.changeLanguage(lng);
+  console.log('cambio', lng)
+};
+
+
 export const Nav20DataSource = {
   isScrollLink: true,
   wrapper: { className: 'header2 home-page-wrapper jrhtw9ph4a-editor_css' },
@@ -17,6 +27,16 @@ export const Nav20DataSource = {
         children: '',
         className: 'menu-item',
       },
+      {
+        name: "internationalization",
+        children: (
+                <Button  type="primary"  onClick={() => changeLanguage('fr')
+                    }
+                >   Change language
+                </Button>
+                  ),
+          className: 'menu-item'
+      }
     ],
   },
   mobileMenu: { className: 'header2-mobile-menu' },
@@ -107,6 +127,7 @@ export const Banner20DataSource = {
                         <span>
                           <p>
                             <b>
+                              <Trans>Welcome to React</Trans>
                               Reconocimiento de la ciudadania italiana a
                               descendientes italianos
                             </b>

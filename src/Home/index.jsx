@@ -20,7 +20,7 @@ import {
   Content90DataSource,
   Content130DataSource,
   Content120DataSource,
-  Footer10DataSource,
+  Footer10DataSource, i18n,
 } from './data.source';
 import './less/antMotionStyle.less';
 

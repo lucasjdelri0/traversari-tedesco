@@ -1,4 +1,14 @@
 import React from 'react';
+import { Input, Button, Row, Col } from "antd";
+import {
+  MailOutlined,
+  IdcardOutlined,
+  UserOutlined,
+  PhoneOutlined,
+} from "@ant-design/icons";
+
+const { TextArea } = Input;
+
 export const Nav30DataSource = {
   wrapper: { className: 'header3 home-page-wrapper l59q48ajj1-editor_css' },
   page: { className: 'home-page l59q16780sh-editor_css' },
@@ -873,7 +883,7 @@ export const Content111DataSource = {
               <span>
                 <p>
                   Contáctenos sin demora completando el siguiente formulario o
-                  llamando directamente al<br />+39 -------------------- para
+                  llamando directamente al<br />+39 329 1379462  para
                   obtener la asistencia que necesita en su caso específico
                 </p>
               </span>
@@ -882,10 +892,101 @@ export const Content111DataSource = {
         ),
         className: 'title-content l57m8a95e9j-editor_css',
       },
+      {
+        name: "frm-contact",
+        children: (
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <Input
+                    placeholder="Nombre(s)"
+                    prefix={<UserOutlined className="site-form-item-icon" />}
+                    allowClear
+                    style={{ marginBottom: 16, marginRight: 8 }}
+                    // suffix={
+                    //   <Tooltip title="Extra information">
+                    //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                    //   </Tooltip>
+                    // }
+                    required
+                />
+                <Input
+                    placeholder="Apellido(s)"
+                    prefix={<UserOutlined className="site-form-item-icon" />}
+                    allowClear
+                    style={{ marginBottom: 16 }}
+                    // suffix={
+                    //   <Tooltip title="Extra information">
+                    //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                    //   </Tooltip>
+                    // }
+                    required
+                />
+              </div>
+              <Input
+                  placeholder="Correo"
+                  prefix={<MailOutlined className="site-form-item-icon" />}
+                  allowClear
+                  style={{ marginBottom: 16 }}
+                  type="email"
+                  // suffix={
+                  //   <Tooltip title="Extra information">
+                  //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                  //   </Tooltip>
+                  // }
+                  required
+              />
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <Input
+                    placeholder="Nacionalidad"
+                    prefix={<IdcardOutlined className="site-form-item-icon" />}
+                    allowClear
+                    style={{ marginBottom: 16, marginRight: 8 }}
+                    // suffix={
+                    //   <Tooltip title="Extra information">
+                    //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                    //   </Tooltip>
+                    // }
+                    required
+                />
+                <Input
+                    placeholder="Telefono"
+                    prefix={<PhoneOutlined />}
+                    allowClear
+                    style={{ marginBottom: 16 }}
+                    // suffix={
+                    //   <Tooltip title="Extra information">
+                    //     <InfoCircleOutlined style={{ color: 'rgba(0,0,0,.45)' }} />
+                    //   </Tooltip>
+                    // }
+                    required
+                />
+              </div>
+              <TextArea
+                  rows={4}
+                  placeholder="Mensaje"
+                  maxLength={300}
+                  showCount
+                  style={{ marginBottom: 16 }}
+                  required
+              />
+              <Button
+                  type="primary"
+                  onClick={() =>
+                      window.open(
+                          "mailto:lucasjdelrio@gmail.com?subject=Holis&body=Hey men"
+                      )
+                  }
+              >
+                Enviar
+              </Button>
+            </div>
+        ),
+        className: "title-content",
+      },
     ],
   },
   button: {
-    className: '',
+    className: 'button-from-hide',
     children: { a: { className: 'button', href: '#', children: '立即报名' } },
   },
 };

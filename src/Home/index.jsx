@@ -4,18 +4,20 @@ import React from 'react';
 import { enquireScreen } from 'enquire-js';
 
 import Nav3 from './Nav3';
-import Banner1 from './Banner1';
+import Banner0 from './Banner0';
 import Teams0 from './Teams0';
-import Content4 from './Content4';
+import Feature2 from './Feature2';
+import Feature1 from './Feature1';
 import Content9 from './Content9';
 import Content11 from './Content11';
 import Footer1 from './Footer1';
 
 import {
   Nav30DataSource,
-  Banner10DataSource,
+  Banner00DataSource,
   Teams00DataSource,
-  Content40DataSource,
+  Feature20DataSource,
+  Feature10DataSource,
   Content90DataSource,
   Content111DataSource,
   Footer10DataSource,
@@ -64,10 +66,10 @@ export default class Home extends React.Component {
         dataSource={Nav30DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Banner1
-        id="Banner1_0"
-        key="Banner1_0"
-        dataSource={Banner10DataSource}
+      <Banner0
+        id="Banner0_0"
+        key="Banner0_0"
+        dataSource={Banner00DataSource}
         isMobile={this.state.isMobile}
       />,
       <Teams0
@@ -76,10 +78,16 @@ export default class Home extends React.Component {
         dataSource={Teams00DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content4
-        id="Content4_0"
-        key="Content4_0"
-        dataSource={Content40DataSource}
+      <Feature2
+        id="Feature2_0"
+        key="Feature2_0"
+        dataSource={Feature20DataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Feature1
+        id="Feature1_0"
+        key="Feature1_0"
+        dataSource={Feature10DataSource}
         isMobile={this.state.isMobile}
       />,
       <Content9

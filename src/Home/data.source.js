@@ -1,11 +1,53 @@
 import React from 'react';
-import { Input, Button, Row, Col } from "antd";
+import { Input, Button, Row, Menu, Dropdown } from "antd";
 import {
   MailOutlined,
   IdcardOutlined,
   UserOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
+
+import { Trans } from 'react-i18next';
+import i18n from "../i18n";
+var loading = false;
+
+const changeLanguage = lng => {
+  i18n.changeLanguage(lng).then(resp => {
+    console.log('Change language to: ', lng)
+    console.log(resp)
+  })
+  .catch(error => {
+    console.log(error)})
+};
+
+
+const menu = (
+    <Menu
+        items={[
+            {
+                key: '1',
+                label: (
+                    <a onClick={() => changeLanguage('sp')}>
+                      <Trans>
+                        btn_language_spanish
+                      </Trans>
+                    </a>
+                ),
+            },
+            {
+                key: '2',
+                label: (
+                    <a onClick={() => changeLanguage('en')}>
+                      <Trans>
+                        btn_language_english
+                      </Trans>
+                    </a>
+                ),
+            },
+        ]}
+    />
+);
+
 
 const { TextArea } = Input;
 
@@ -21,10 +63,17 @@ export const Nav30DataSource = {
     children: [
       {
         name: 'item3',
-        className: 'header3-item l59pl5lznuf-editor_css',
+        className: 'item-menu',
         children: {
-          href: '#',
-          children: [{ children: '导航四', name: 'text' }],
+          children: [{ children: (
+              <div style={{paddingTop: 10}}>
+                <Dropdown overlay={menu} placement="bottom" arrow>
+                  <Button>  <Trans>
+                    btn_language
+                  </Trans></Button>
+                </Dropdown>
+              </div>
+            ), name: 'text' }],
         },
       },
     ],
@@ -80,13 +129,9 @@ export const Teams00DataSource = {
                           <span>
                             <span>
                               <span>
-                                <p>
-                                  "Me siento sinceramente conmovido con su
-                                  inmigración de retorno y velo para que Italia
-                                  les pueda devolver los frutos de los inmensos
-                                  sacrificios que fueron realizados por sus
-                                  antepasados"
-                                </p>
+                                <Trans>
+                                  introduction
+                                  </Trans>
                               </span>
                             </span>
                           </span>
@@ -122,7 +167,9 @@ export const Teams00DataSource = {
                           <span>
                             <span>
                               <span>
-                                <h3>Abogado Iure Sanguinis (Vía Judicial)</h3>
+                                <h3>  <Trans>
+                                  introduction_lawyer
+                                  </Trans></h3>
                               </span>
                             </span>
                           </span>
@@ -1004,7 +1051,7 @@ export const Content111DataSource = {
       {
         name: "frm-contact",
         children: (
-            <form action="https://formsubmit.co/enzoimola@hotmail.com" method="POST">
+            <form submit="submitForm()" action="https://formsubmit.co/enzoimola@hotmail.com" method="POST">
               <div style={{ display: "flex", flexDirection: "column", marginTop: 20 }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <Input
@@ -1088,7 +1135,7 @@ export const Content111DataSource = {
                 />
                 <button
                     type="submit"
-                    style={{ marginTop: 20 }}
+                    style={{ marginTop: 20 , cursor:"pointer"}}
                 >
                   Enviar
                 </button>

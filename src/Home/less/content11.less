@@ -1,12 +1,12 @@
 @content11: content11;
 .@{content11}-wrapper {
-  height: 480px;
+  height: 630px;
   background: url("https://gw.alipayobjects.com/zos/rmsportal/ZsWYzLOItgeaWDSsXdZd.svg") no-repeat bottom;
   background-size: cover;
   background-size: 100%;
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 96px;
+  padding-top: 40px;
   &.home-page-wrapper {
     .title-wrapper {
       margin-bottom: 32px;
@@ -36,11 +36,17 @@
   }
   .title-content {
     line-height: 32px;
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 767px) {
   .@{content11}-wrapper {
     padding-bottom: 0;
+    height: 700px;
+  }
+  .title-content {
+    margin: 16px;
   }
 }

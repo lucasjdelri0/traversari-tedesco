@@ -1,36 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Input, Button, Row, Menu, Dropdown } from "antd";
 import {
   MailOutlined,
   IdcardOutlined,
   UserOutlined,
   PhoneOutlined,
+  InstagramOutlined,
+  FacebookOutlined
 } from "@ant-design/icons";
 
-import { Trans } from 'react-i18next';
-import i18n from "../i18n";
+import {Trans, useTranslation} from 'react-i18next';
+import i18next from "../i18n";
 var loading = false;
 
-const changeLanguage = lng => {
-  i18n.changeLanguage(lng).then(resp => {
-    console.log('Change language to: ', lng)
-    console.log(resp)
-  })
-  .catch(error => {
-    console.log(error)})
-};
-
-
-const menu = (
+const changeLanguage = (lng) => i18next.changeLanguage(lng);
+const menu = () => {
+  return(
     <Menu
         items={[
             {
                 key: '1',
                 label: (
                     <a onClick={() => changeLanguage('sp')}>
-                      <Trans>
-                        btn_language_spanish
-                      </Trans>
+                      <Trans i18nKey="btn_language_spanish"/>
                     </a>
                 ),
             },
@@ -46,7 +38,9 @@ const menu = (
             },
         ]}
     />
-);
+)
+}
+
 
 
 const { TextArea } = Input;
@@ -61,7 +55,7 @@ export const Nav30DataSource = {
   Menu: {
     className: 'header3-menu',
     children: [
-      {
+/** {
         name: 'item3',
         className: 'item-menu',
         children: {
@@ -75,7 +69,7 @@ export const Nav30DataSource = {
               </div>
             ), name: 'text' }],
         },
-      },
+      },**/
     ],
   },
   mobileMenu: { className: 'header3-mobile-menu' },
@@ -129,9 +123,7 @@ export const Teams00DataSource = {
                           <span>
                             <span>
                               <span>
-                                <Trans>
-                                  introduction
-                                  </Trans>
+                                <Trans i18nKey="introduction"/>
                               </span>
                             </span>
                           </span>
@@ -149,7 +141,9 @@ export const Teams00DataSource = {
                 <span>
                   <span>
                     <span>
-                      <h3>Dr. Mario Tedesco</h3>
+                      <span>
+                        <h3>Mario Tedesco</h3>
+                      </span>
                     </span>
                   </span>
                 </span>
@@ -209,7 +203,17 @@ export const Feature20DataSource = {
             <span>
               <span>
                 <span>
-                  <p>1) Vía Materna</p>
+                  <span>
+                    <span>
+                      <span>
+                        <span>
+                          <span>
+                            <p>&nbsp;➮ Vía Materna</p>
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
                 </span>
               </span>
             </span>
@@ -253,7 +257,9 @@ export const Feature10DataSource = {
                   <span>
                     <span>
                       <span>
-                        <p>2) Plazos de Espera</p>
+                        <span>
+                          <p>‣&nbsp;Plazos de Espera</p>
+                        </span>
                       </span>
                     </span>
                   </span>
@@ -322,14 +328,21 @@ export const Content90DataSource = {
               <span>
                 <span>
                   <span>
-                    <p>
-                      Si bien es difícil predecir con exactitud, tanto en el
-                      caso de una solicitud de reconocimiento de la ciudadanía
-                      por vía materna como en el caso de un recurso debido a los
-                      plazos de espera, se puede tomar como guía al tiempo medio
-                      de decisión de los procedimientos ya concluidos, que
-                      actualmente es de unos 12/18 meses.
-                    </p>
+                    <span>
+                      <span>
+                        <span>
+                          <p>
+                            Si bien es difícil predecir con exactitud, tanto en
+                            el caso de una solicitud de reconocimiento de la
+                            ciudadanía por vía materna como en el caso de un
+                            recurso debido a los plazos de espera, se puede
+                            tomar como guía al tiempo medio de decisión de los
+                            procedimientos ya concluidos, que actualmente es de
+                            unos 24/30 meses.<br />
+                          </p>
+                        </span>
+                      </span>
+                    </span>
                   </span>
                 </span>
               </span>
@@ -348,56 +361,6 @@ export const Content90DataSource = {
         playScale: 0.3,
         children: {
           imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/Fwjf0J.png',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
-          },
-          name: {
-            className: 'block-name',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
-          },
-          post: {
-            className: 'block-post',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
-          },
-          time: {
-            className: 'block-time l57kemdn3mo-editor_css',
-            children: (
-              <span>
-                <span>
-                  <p>Previo a Juicio</p>
-                </span>
-              </span>
-            ),
-          },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <span>
-                  <p>Poder y Documentación</p>
-                </span>
-              </span>
-            ),
-          },
           content: {
             className: 'block-content l57fi2w6m18-editor_css',
             children: (
@@ -434,24 +397,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-        },
-      },
-      {
-        name: 'block2',
-        className: 'block-wrapper l57l1erixwp-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper l57g4e4xm9-editor_css' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
-          },
           name: {
             className: 'block-name',
             children: (
@@ -459,6 +404,32 @@ export const Content90DataSource = {
                 <p>
                   <br />
                 </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time l57kemdn3mo-editor_css',
+            children: (
+              <span>
+                <span>
+                  <p>Previo a Juicio</p>
+                </span>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <span>
+                  <p>Poder y Documentación</p>
+                </span>
               </span>
             ),
           },
@@ -472,6 +443,43 @@ export const Content90DataSource = {
               </span>
             ),
           },
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/Fwjf0J.png',
+          },
+        },
+      },
+      {
+        name: 'block2',
+        className: 'block-wrapper l57l1erixwp-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
+          content: {
+            className: 'block-content l57g6047k2d-editor_css',
+            children: (
+              <span>
+                <span>
+                  <p>
+                    El Dr. Tedesco presenta una demanda contra el estado
+                    italiano a fines de obtener el reconocimiento de la
+                    ciudadanía de los interesados (demandantes).
+                  </p>
+                </span>
+              </span>
+            ),
+          },
+          name: {
+            className: 'block-name',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper l57g4e4xm9-editor_css' },
           time: {
             className: 'block-time l57kehryrr8-editor_css',
             children: (
@@ -483,6 +491,11 @@ export const Content90DataSource = {
                 </span>
               </span>
             ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
           },
           title: {
             className: 'block-title',
@@ -500,48 +513,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          content: {
-            className: 'block-content l57g6047k2d-editor_css',
-            children: (
-              <span>
-                <span>
-                  <p>
-                    El Dr. Tedesco presenta una demanda contra el estado
-                    italiano a fines de obtener el reconocimiento de la
-                    ciudadanía de los interesados (demandantes).
-                  </p>
-                </span>
-              </span>
-            ),
-          },
-        },
-      },
-      {
-        name: 'block3',
-        className: 'block-wrapper l57lp3kb9cc-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
-          },
-          name: {
-            className: 'block-name',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
-          },
           post: {
             className: 'block-post',
             children: (
@@ -552,26 +523,18 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          time: {
-            className: 'block-time',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
           },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <span>
-                  <p>Inscripción en Tribunal</p>
-                </span>
-              </span>
-            ),
-          },
+        },
+      },
+      {
+        name: 'block3',
+        className: 'block-wrapper l57lp3kb9cc-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
           content: {
             className: 'block-content l57hqtkvppt-editor_css',
             children: (
@@ -588,24 +551,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-        },
-      },
-      {
-        name: 'block~l57fmx26c7i',
-        className: 'block-wrapper l57lpexuoy-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
-          },
           name: {
             className: 'block-name',
             children: (
@@ -613,6 +558,32 @@ export const Content90DataSource = {
                 <p>
                   <br />
                 </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <span>
+                  <p>Inscripción en Tribunal</p>
+                </span>
               </span>
             ),
           },
@@ -626,24 +597,18 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          time: {
-            className: 'block-time',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
           },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <p>Asignación de Juez</p>
-              </span>
-            ),
-          },
+        },
+      },
+      {
+        name: 'block~l57fmx26c7i',
+        className: 'block-wrapper l57lpexuoy-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
           content: {
             className: 'block-content l57hv2u0zr-editor_css',
             children: (
@@ -656,24 +621,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-        },
-      },
-      {
-        name: 'block~l57fn32p5ie',
-        className: 'block-wrapper l57lpm8q1xb-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
-          },
           name: {
             className: 'block-name',
             children: (
@@ -681,6 +628,30 @@ export const Content90DataSource = {
                 <p>
                   <br />
                 </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <p>Asignación de Juez</p>
               </span>
             ),
           },
@@ -694,24 +665,18 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          time: {
-            className: 'block-time',
-            children: (
-              <span>
-                <p>
-                  <br />
-                </p>
-              </span>
-            ),
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
           },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <p>Audiencia</p>
-              </span>
-            ),
-          },
+        },
+      },
+      {
+        name: 'block~l57fn32p5ie',
+        className: 'block-wrapper l57lpm8q1xb-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
           content: {
             className: 'block-content l57hzos84uc-editor_css',
             children: (
@@ -726,24 +691,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-        },
-      },
-      {
-        name: 'block~l57fn4hssra',
-        className: 'block-wrapper l57lpsie94f-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/FwjVra.webp',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
-          },
           name: {
             className: 'block-name',
             children: (
@@ -751,6 +698,30 @@ export const Content90DataSource = {
                 <p>
                   <br />
                 </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <p>Audiencia</p>
               </span>
             ),
           },
@@ -764,28 +735,18 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          time: {
-            className: 'block-time',
-            children: (
-              <span>
-                <span>
-                  <p>Fin del Juicio</p>
-                </span>
-              </span>
-            ),
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/Fwjkgy.png',
           },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <p>Sentencia</p>
-                  </span>
-                </span>
-              </span>
-            ),
-          },
+        },
+      },
+      {
+        name: 'block~l57fn4hssra',
+        className: 'block-wrapper l57lpsie94f-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
           content: {
             className: 'block-content l57i1tmdjkn-editor_css',
             children: (
@@ -799,24 +760,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-        },
-      },
-      {
-        name: 'block~l57iy5dadkj',
-        className: 'block-wrapper l57i9da2lwh-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/FwjRSL.webp',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
-          },
           name: {
             className: 'block-name',
             children: (
@@ -824,6 +767,34 @@ export const Content90DataSource = {
                 <p>
                   <br />
                 </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time',
+            children: (
+              <span>
+                <span>
+                  <p>Fin del Juicio</p>
+                </span>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/agOOBdKEIJlQhfeYhHJc.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <p>Sentencia</p>
+                  </span>
+                </span>
               </span>
             ),
           },
@@ -837,40 +808,18 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          time: {
-            className: 'block-time l660caty2kp-editor_css',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <p>
-                      Posterior a Juicio<br />
-                    </p>
-                  </span>
-                </span>
-              </span>
-            ),
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/FwjVra.webp',
           },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <span>
-                      <span>
-                        <span>
-                          <span>
-                            <p>Inscripción en Consulado</p>
-                          </span>
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </span>
-            ),
-          },
+        },
+      },
+      {
+        name: 'block~l57iy5dadkj',
+        className: 'block-wrapper l57i9da2lwh-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
           content: {
             className: 'block-content l57i1tmdjkn-editor_css',
             children: (
@@ -905,24 +854,6 @@ export const Content90DataSource = {
               </span>
             ),
           },
-        },
-      },
-      {
-        name: 'block~l65z55qz82h',
-        className: 'block-wrapper l57i9da2lwh-editor_css',
-        playScale: 0.3,
-        children: {
-          imgWrapper: { className: 'image-wrapper' },
-          textWrapper: { className: 'text-wrapper' },
-          img: {
-            className: 'block-img',
-            children: 'https://i.im.ge/2022/07/29/FwjGfX.webp',
-          },
-          icon: {
-            className: 'block-icon',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
-          },
           name: {
             className: 'block-name',
             children: (
@@ -930,6 +861,46 @@ export const Content90DataSource = {
                 <p>
                   <br />
                 </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time l660caty2kp-editor_css',
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <p>
+                      Posterior a Juicio<br />
+                    </p>
+                  </span>
+                </span>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <span>
+                      <span>
+                        <span>
+                          <span>
+                            <p>Inscripción en Consulado</p>
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
               </span>
             ),
           },
@@ -943,36 +914,18 @@ export const Content90DataSource = {
               </span>
             ),
           },
-          time: {
-            className: 'block-time',
-            children: (
-              <span>
-                <span>
-                  <p>
-                    <br />
-                  </p>
-                </span>
-              </span>
-            ),
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/FwjRSL.webp',
           },
-          title: {
-            className: 'block-title',
-            children: (
-              <span>
-                <span>
-                  <span>
-                    <span>
-                      <span>
-                        <span>
-                          <p>AIRE y Pasaporte</p>
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                </span>
-              </span>
-            ),
-          },
+        },
+      },
+      {
+        name: 'block~l65z55qz82h',
+        className: 'block-wrapper l57i9da2lwh-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
           content: {
             className: 'block-content l57i1tmdjkn-editor_css',
             children: (
@@ -1003,6 +956,246 @@ export const Content90DataSource = {
               </span>
             ),
           },
+          name: {
+            className: 'block-name',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time',
+            children: (
+              <span>
+                <span>
+                  <p>
+                    <br />
+                  </p>
+                </span>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <span>
+                      <span>
+                        <span>
+                          <p>AIRE y Pasaporte</p>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            ),
+          },
+          post: {
+            className: 'block-post',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/07/29/FwjGfX.webp',
+          },
+        },
+      },
+      {
+        name: 'block~l6q7zxbq16q',
+        className: 'block-wrapper l57i9da2lwh-editor_css',
+        playScale: 0.3,
+        children: {
+          imgWrapper: { className: 'image-wrapper' },
+          content: {
+            className: 'block-content l57i1tmdjkn-editor_css',
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <span>
+                      <span>
+                        <span>
+                          <span>
+                            <span>
+                              <span>
+                                <span>
+                                  <span>
+                                    <span>
+                                      <p>
+                                        Se puede tomar como guía al tiempo medio
+                                        de decisión de los procedimientos ya
+                                        concluidos, que actualmente es de unos
+                                        24/30 meses.
+                                      </p>
+                                    </span>
+                                  </span>
+                                </span>
+                              </span>
+                            </span>
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            ),
+          },
+          name: {
+            className: 'block-name',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          textWrapper: { className: 'text-wrapper' },
+          time: {
+            className: 'block-time',
+            children: (
+              <span>
+                <span>
+                  <p>
+                    <br />
+                  </p>
+                </span>
+              </span>
+            ),
+          },
+          icon: {
+            className: 'block-icon',
+            children:
+              'https://gw.alipayobjects.com/zos/rmsportal/QviGtUPvTFxdhsTUAacr.svg',
+          },
+          title: {
+            className: 'block-title',
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <span>
+                      <span>
+                        <span>
+                          <span>
+                            <p>Tiempos del juicio</p>
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            ),
+          },
+          post: {
+            className: 'block-post',
+            children: (
+              <span>
+                <p>
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+          img: {
+            className: 'block-img',
+            children: 'https://i.im.ge/2022/08/12/OMdHYC.time-png.png',
+          },
+        },
+      },
+    ],
+  },
+};
+export const Feature00DataSource = {
+  wrapper: { className: 'home-page-wrapper content0-wrapper' },
+  page: { className: 'home-page content0' },
+  OverPack: { playScale: 0.3, className: '' },
+  titleWrapper: {
+    className: 'title-wrapper',
+    children: [
+      {
+        name: 'title',
+        children: (
+          <span>
+            <p>Vía Administrativa</p>
+          </span>
+        ),
+      },
+      {
+        name: 'content~l6q9ild3706',
+        className: '',
+        children: (
+          <span>
+            <p>
+              Para más información sobre solicitudes de reconocimiento de
+              ciudadanía por vía administrativa, comunicarse con nuestros
+              partners.
+            </p>
+          </span>
+        ),
+      },
+    ],
+  },
+  childWrapper: {
+    className: 'content0-block-wrapper l6q99624ah-editor_css',
+    children: [
+      {
+        name: 'block2',
+        className: 'content0-block',
+        md: 8,
+        xs: 24,
+        children: {
+          className: 'content0-block-item l6q993uqgoj-editor_css',
+          children: [
+            {
+              name: 'image',
+              className: 'content0-block-icon l6q99jh2dbo-editor_css',
+              href:"https://www.instagram.com/tanos_italia/?igshid=YmMyMTA2M2Y%3D",
+              target:"_blank",
+              children:
+                'https://i.im.ge/2022/08/12/OMqne6.71619f11-4b9f-461c-aa45-b4f256daba71.jpg',
+            },
+            {
+              name: 'contact-tanos',
+              className: 'content0-block-icon l6q99jh2dbo-editor_css',
+              href:"https://www.instagram.com/tanos_italia/?igshid=YmMyMTA2M2Y%3D",
+              target:"_blank",
+              children:
+                    <div className='content0-block-contact-tanos'>
+                     <InstagramOutlined style={{ fontSize: '30px', marginRight: 10}} />
+                    </div>
+            },
+            {
+              name: 'contact-tanos',
+              className: 'content0-block-icon l6q99jh2dbo-editor_css',
+              href:"https://www.facebook.com/TanosItalia",
+              target:"_blank",
+              children:
+                      <div className='content0-block-contact-tanos'>
+                        <FacebookOutlined style={{ fontSize: '30px', marginLeft: 50}}/>
+                      </div>
+            },
+          ],
         },
       },
     ],
@@ -1039,8 +1232,8 @@ export const Content111DataSource = {
               <span>
                 <p>
                   Contáctenos sin demora completando el siguiente formulario o
-                  llamando directamente al <b>+39 342 1908539</b> para
-                  obtener la asistencia que necesita en su caso específico.
+                  llamando directamente al <b>+39 351 8017252</b> para
+                  obtener la asistencia que necesita en su caso específico
                 </p>
               </span>
             </span>
@@ -1051,7 +1244,7 @@ export const Content111DataSource = {
       {
         name: "frm-contact",
         children: (
-            <form submit="submitForm()" action="https://formsubmit.co/enzoimola@hotmail.com" method="POST">
+            <form action="https://formsubmit.co/ciudadaniaiuresanguinis@gmail.com" method="POST">
               <div style={{ display: "flex", flexDirection: "column", marginTop: 20 }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <Input
@@ -1135,7 +1328,7 @@ export const Content111DataSource = {
                 />
                 <button
                     type="submit"
-                    style={{ marginTop: 20 , cursor:"pointer"}}
+                    style={{ marginTop: 20, cursor: "pointer" }}
                 >
                   Enviar
                 </button>
@@ -1148,10 +1341,9 @@ export const Content111DataSource = {
   },
   button: {
     className: '',
-    children: { a: { className: 'button', href: '#', children: '立即报名' } },
+    children: { a: { className: '', href: '', children: '' } },
   },
 };
-
 export const Footer10DataSource = {
   wrapper: {
     className: 'home-page-wrapper footer1-wrapper l57m0kkeea-editor_css',
@@ -1311,7 +1503,9 @@ export const Footer10DataSource = {
           children: (
             <span>
               <span>
-                <p>Vía Administrativa</p>
+                <span>
+                  <p>Vía Administrativa</p>
+                </span>
               </span>
             </span>
           ),
@@ -1326,11 +1520,15 @@ export const Footer10DataSource = {
                 <span>
                   <span>
                     <span>
-                      <p>
-                        Para más información sobre solicitudes de reconocimiento
-                        de ciudadanía por vía administrativa, comunicarse con
-                        nuestros partners.
-                      </p>
+                      <span>
+                        <span>
+                          <p>
+                            Para más información sobre solicitudes de
+                            reconocimiento de ciudadanía por vía administrativa,
+                            comunicarse con nuestros partners.
+                          </p>
+                        </span>
+                      </span>
                     </span>
                   </span>
                 </span>
@@ -1346,7 +1544,9 @@ export const Footer10DataSource = {
                 <span>
                   <span>
                     <span>
-                      <p>Tanos Italia (Vía Administrativa)</p>
+                      <span>
+                        <p>Tanos Italia (Vía Administrativa)</p>
+                      </span>
                     </span>
                   </span>
                 </span>
@@ -1355,6 +1555,7 @@ export const Footer10DataSource = {
               className: 'l663f86vzr-editor_css',
             },
           ],
+          className: 'l6qa25dhoeo-editor_css',
         },
       },
     ],
@@ -1366,7 +1567,9 @@ export const Footer10DataSource = {
     children: (
       <span>
         <span>
-          <p>Dr. Mario Tedesco</p>
+          <span>
+            <p>Mario Tedesco</p>
+          </span>
         </span>
       </span>
     ),

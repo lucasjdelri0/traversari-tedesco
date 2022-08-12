@@ -2,6 +2,8 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from './utils';
+import {useTranslation} from "react-i18next";
+
 
 const { Item, SubMenu } = Menu;
 

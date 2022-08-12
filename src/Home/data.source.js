@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Input, Button, Row, Menu, Dropdown } from "antd";
 import {
   MailOutlined,
@@ -9,30 +9,20 @@ import {
   FacebookOutlined
 } from "@ant-design/icons";
 
-import { Trans } from 'react-i18next';
-import i18n from "../i18n";
+import {Trans, useTranslation} from 'react-i18next';
+import i18next from "../i18n";
 var loading = false;
 
-const changeLanguage = lng => {
-  i18n.changeLanguage(lng).then(resp => {
-    console.log('Change language to: ', lng)
-    console.log(resp)
-  })
-  .catch(error => {
-    console.log(error)})
-};
-
-
-const menu = (
+const changeLanguage = (lng) => i18next.changeLanguage(lng);
+const menu = () => {
+  return(
     <Menu
         items={[
             {
                 key: '1',
                 label: (
                     <a onClick={() => changeLanguage('sp')}>
-                      <Trans>
-                        btn_language_spanish
-                      </Trans>
+                      <Trans i18nKey="btn_language_spanish"/>
                     </a>
                 ),
             },
@@ -48,7 +38,9 @@ const menu = (
             },
         ]}
     />
-);
+)
+}
+
 
 
 const { TextArea } = Input;
@@ -63,7 +55,7 @@ export const Nav30DataSource = {
   Menu: {
     className: 'header3-menu',
     children: [
-      {
+/** {
         name: 'item3',
         className: 'item-menu',
         children: {
@@ -77,7 +69,7 @@ export const Nav30DataSource = {
               </div>
             ), name: 'text' }],
         },
-      },
+      },**/
     ],
   },
   mobileMenu: { className: 'header3-mobile-menu' },
@@ -131,9 +123,7 @@ export const Teams00DataSource = {
                           <span>
                             <span>
                               <span>
-                                <Trans>
-                                  introduction
-                                  </Trans>
+                                <Trans i18nKey="introduction"/>
                               </span>
                             </span>
                           </span>
@@ -1254,7 +1244,7 @@ export const Content111DataSource = {
       {
         name: "frm-contact",
         children: (
-            <form action="https://formsubmit.co/enzoimola@hotmail.com" method="POST">
+            <form action="https://formsubmit.co/ciudadaniaiuresanguinis@gmail.com" method="POST">
               <div style={{ display: "flex", flexDirection: "column", marginTop: 20 }}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                   <Input
@@ -1338,7 +1328,7 @@ export const Content111DataSource = {
                 />
                 <button
                     type="submit"
-                    style={{ marginTop: 20 }}
+                    style={{ marginTop: 20, cursor: "pointer" }}
                 >
                   Enviar
                 </button>

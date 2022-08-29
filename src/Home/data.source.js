@@ -1239,9 +1239,8 @@ export const Content111DataSource = {
             <span>
               <span>
                 <p>
-                  Contáctenos sin demora completando el siguiente formulario o
-                  llamando directamente al <b>+39 351 8017252</b> para obtener
-                  la asistencia que necesita en su caso específico
+                  Contáctenos sin demora completando el siguiente formulario y obtendrá
+                  la asistencia que necesita en su caso específico.
                 </p>
               </span>
             </span>

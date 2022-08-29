@@ -293,9 +293,8 @@ export const Feature10DataSource = {
                     En aquellos casos donde el interesado sea capaz de demostrar
                     la demora existente en el consulado, el estudio puede
                     solicitar el reconocimiento de la ciudadanía por vía
-                    judicial alegando que el demandante tiene el derecho pero no
-                    así el acceso a la vía administrativa que le permita
-                    completar el procedimiento.
+                    judicial alegando que el demandante tiene el derecho pero es
+                    imposible conseguir turnos.
                   </p>
                 </span>
               </span>

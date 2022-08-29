@@ -278,9 +278,18 @@ export const Feature10DataSource = {
               <span>
                 <span>
                   <p>
-                    En algunos países, como por ejemplo Brasil o Argentina, los consulados italianos están muy atrasados en el trámite administrativo.
-                    Esto quiere decir que la persona interesada en obtener el reconocimiento de la ciudadanía italiana tiene que esperar muchos años para poder presentar la documentación necesaria para el reconocimiento de la ciudadanía italiana.
-                    Solo en los casos en que el interesado pueda demostrar el interés y la demora del Consulado, el estudio puede solicitar el reconocimiento de la ciudadanía por vía judicial alegando que el demandante tiene derecho y no tiene acceso a la vía administrativa para poder ejercerlo.
+                    En algunos países, como por ejemplo Brasil o Argentina, los
+                    consulados italianos están muy atrasados en el trámite
+                    administrativo. Esto quiere decir que la persona interesada
+                    en obtener el reconocimiento de la ciudadanía italiana tiene
+                    que esperar muchos años para poder presentar la
+                    documentación necesaria para el reconocimiento de la
+                    ciudadanía italiana. Solo en los casos en que el interesado
+                    pueda demostrar el interés y la demora del Consulado, el
+                    estudio puede solicitar el reconocimiento de la ciudadanía
+                    por vía judicial alegando que el demandante tiene derecho y
+                    no tiene acceso a la vía administrativa para poder
+                    ejercerlo.
                   </p>
                 </span>
               </span>
@@ -1239,8 +1248,8 @@ export const Content111DataSource = {
             <span>
               <span>
                 <p>
-                  Contáctenos sin demora completando el siguiente formulario y obtendrá
-                  la asistencia que necesita en su caso específico.
+                  Contáctenos sin demora completando el siguiente formulario y
+                  obtendrá la asistencia que necesita en su caso específico.
                 </p>
               </span>
             </span>
@@ -1376,8 +1385,7 @@ export const Footer10DataSource = {
         className: "block",
         title: {
           className: "logo l59tb1ubz7j-editor_css",
-          children:
-            "https://www.linkpicture.com/q/identidad-mario-tesc-06_2.png",
+          children: "https://i.im.ge/2022/07/29/FwrkbW.png",
         },
         childWrapper: {
           className: "slogan",

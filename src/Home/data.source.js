@@ -205,7 +205,7 @@ export const Feature20DataSource = {
                       <span>
                         <span>
                           <span>
-                            <p>&nbsp;➮ Vía Materna</p>
+                            <p>Juício por Vía Materna</p>
                           </span>
                         </span>
                       </span>
@@ -255,7 +255,7 @@ export const Feature10DataSource = {
                     <span>
                       <span>
                         <span>
-                          <p>‣&nbsp;Plazos de Espera</p>
+                          <p>Ciudadanía Italiana por falta de turnos</p>
                         </span>
                       </span>
                     </span>
@@ -278,11 +278,9 @@ export const Feature10DataSource = {
               <span>
                 <span>
                   <p>
-                    Este caso se presenta cuando las solicitudes enviadas por
-                    los interesados, ya sean de carácter consular o
-                    administrativo, enfrentan tiempos de espera que superan el
-                    plazo máximo de 2 (dos) años previsto por la legislación
-                    italiana para el tratamiento de solicitudes.
+                    En algunos países, como por ejemplo Brasil o Argentina, los consulados italianos están muy atrasados en el trámite administrativo.
+                    Esto quiere decir que la persona interesada en obtener el reconocimiento de la ciudadanía italiana tiene que esperar muchos años para poder presentar la documentación necesaria para el reconocimiento de la ciudadanía italiana.
+                    Solo en los casos en que el interesado pueda demostrar el interés y la demora del Consulado, el estudio puede solicitar el reconocimiento de la ciudadanía por vía judicial alegando que el demandante tiene derecho y no tiene acceso a la vía administrativa para poder ejercerlo.
                   </p>
                 </span>
               </span>

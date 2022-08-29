@@ -205,7 +205,9 @@ export const Feature20DataSource = {
                       <span>
                         <span>
                           <span>
-                            <p>Ciudadanía por vía materna</p>
+                            <p style={{ textAlign: "center" }}>
+                              Ciudadanía por vía materna
+                            </p>
                           </span>
                         </span>
                       </span>
@@ -255,7 +257,7 @@ export const Feature10DataSource = {
                     <span>
                       <span>
                         <span>
-                          <p style={{ marginBottom: 16 }}>
+                          <p style={{ textAlign: "center", marginBottom: 16 }}>
                             Ciudadanía por falta de turno
                           </p>
                         </span>

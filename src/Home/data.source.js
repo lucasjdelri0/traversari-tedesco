@@ -205,7 +205,7 @@ export const Feature20DataSource = {
                       <span>
                         <span>
                           <span>
-                            <p>Juício por Vía Materna</p>
+                            <p>Ciudadanía por vía materna</p>
                           </span>
                         </span>
                       </span>
@@ -255,7 +255,9 @@ export const Feature10DataSource = {
                     <span>
                       <span>
                         <span>
-                          <p>Ciudadanía Italiana por falta de turnos</p>
+                          <p style={{ marginBottom: 16 }}>
+                            Ciudadanía por falta de turno
+                          </p>
                         </span>
                       </span>
                     </span>
@@ -277,19 +279,21 @@ export const Feature10DataSource = {
             <span>
               <span>
                 <span>
+                  <p style={{ marginBottom: 8 }}>
+                    En algunos países, como ocurre en Argentina o Brasil, los
+                    consulados italianos están muy atrasados en el sector
+                    administrativo, lo que genera que el interesado en obtener
+                    el reconocimiento de la ciudadanía tenga que esperar muchos
+                    años para poder presentar su documentación y comenzar así el
+                    trámite.
+                  </p>
                   <p>
-                    En algunos países, como por ejemplo Brasil o Argentina, los
-                    consulados italianos están muy atrasados en el trámite
-                    administrativo. Esto quiere decir que la persona interesada
-                    en obtener el reconocimiento de la ciudadanía italiana tiene
-                    que esperar muchos años para poder presentar la
-                    documentación necesaria para el reconocimiento de la
-                    ciudadanía italiana. Solo en los casos en que el interesado
-                    pueda demostrar el interés y la demora del Consulado, el
-                    estudio puede solicitar el reconocimiento de la ciudadanía
-                    por vía judicial alegando que el demandante tiene derecho y
-                    no tiene acceso a la vía administrativa para poder
-                    ejercerlo.
+                    En aquellos casos donde el interesado sea capaz de demostrar
+                    la demora existente en el consulado, el estudio puede
+                    solicitar el reconocimiento de la ciudadanía por vía
+                    judicial alegando que el demandante tiene el derecho pero no
+                    así el acceso a la vía administrativa que le permita
+                    completar el procedimiento.
                   </p>
                 </span>
               </span>
@@ -337,12 +341,12 @@ export const Content90DataSource = {
                         <span>
                           <p>
                             Si bien es difícil predecir con exactitud, tanto en
-                            el caso de una solicitud de reconocimiento de la
-                            ciudadanía por vía materna como en el caso de un
-                            recurso debido a los plazos de espera, se puede
-                            tomar como guía al tiempo medio de decisión de los
-                            procedimientos ya concluidos, que actualmente es de
-                            unos 24/30 meses.
+                            el caso de una solicitud de reconocimiento de
+                            ciudadanía por vía materna como en caso de aplicar
+                            un recurso debido a falta de turnos, se puede tomar
+                            como guía el tiempo medio de decisión existente en
+                            los procedimientos ya concluídos, que actualmente es
+                            de unos 24/30 meses.
                             <br />
                           </p>
                         </span>
@@ -780,7 +784,7 @@ export const Content90DataSource = {
           },
           textWrapper: { className: "text-wrapper" },
           time: {
-            className: "block-time",
+            className: "block-time l57kemdn3mo-editor_css",
             children: (
               <span>
                 <span>
@@ -1049,10 +1053,10 @@ export const Content90DataSource = {
                                   <span>
                                     <span>
                                       <p>
-                                        Se puede tomar como guía al tiempo medio
-                                        de decisión de los procedimientos ya
-                                        concluidos, que actualmente es de unos
-                                        24/30 meses.
+                                        Se puede tomar como guía el tiempo medio
+                                        de decisión existente en los
+                                        procedimientos ya concluídos, que
+                                        actualmente es de unos 24/30 meses.
                                       </p>
                                     </span>
                                   </span>
@@ -1146,7 +1150,7 @@ export const Feature00DataSource = {
         name: "title",
         children: (
           <span>
-            <p>Vía Administrativa</p>
+            <p>Ciudadanía por vía administrativa</p>
           </span>
         ),
       },
@@ -1157,8 +1161,8 @@ export const Feature00DataSource = {
           <span>
             <p>
               Para más información sobre solicitudes de reconocimiento de
-              ciudadanía por vía administrativa, comunicarse con nuestros
-              partners.
+              ciudadanía por vía administrativa comunicarse con TANOS, agente de
+              relaciones italo-argentinas.
             </p>
           </span>
         ),
@@ -1249,7 +1253,7 @@ export const Content111DataSource = {
               <span>
                 <p>
                   Contáctenos sin demora completando el siguiente formulario y
-                  obtendrá la asistencia que necesita en su caso específico.
+                  obtenga la asistencia que necesita para su caso específico.
                 </p>
               </span>
             </span>
@@ -1382,9 +1386,9 @@ export const Footer10DataSource = {
         name: "block0",
         xs: 24,
         md: 6,
-        className: "block",
+        className: "block l57m8fdv4gq-editor_css",
         title: {
-          className: "logo l59tb1ubz7j-editor_css",
+          className: "logo",
           children: "https://i.im.ge/2022/07/29/FwrkbW.png",
         },
         childWrapper: {
@@ -1405,7 +1409,7 @@ export const Footer10DataSource = {
                                   <span>
                                     <p>
                                       Solicitudes de reconocimiento de
-                                      Ciudadanía Italiana&nbsp;“Iure Sanguinis”
+                                      Ciudadanía Italiana “Iure Sanguinis”
                                     </p>
                                   </span>
                                 </span>
@@ -1453,12 +1457,10 @@ export const Footer10DataSource = {
               href: "",
               children: (
                 <span>
-                  <span>
-                    <p>AIRE</p>
-                  </span>
+                  <p>AIRE</p>
                 </span>
               ),
-              className: "l662w6x64t-editor_css",
+              className: "l57m8ef96b-editor_css",
             },
             {
               name: "link3",
@@ -1474,54 +1476,59 @@ export const Footer10DataSource = {
         },
       },
       {
-        name: "block3",
+        name: "block2",
         xs: 24,
         md: 6,
-        className: "block l57m9vag6uh-editor_css",
+        className: "block l57m8fdv4gq-editor_css",
         title: {
           children: (
             <span>
               <p>Contacto</p>
             </span>
           ),
-          className: "l57m85qbe6-editor_css",
+          className: "l57m7yino6g-editor_css",
         },
         childWrapper: {
           children: [
             {
-              href: "https://www.linkedin.com/in/traversari-tedesco-studio-legale-cassazionista-08532423a/",
               name: "link0",
+              href: "",
               children: (
                 <span>
-                  <span>
-                    <p>LinkedIn</p>
-                  </span>
+                  <a
+                    href="https://www.linkedin.com/in/traversari-tedesco-studio-legale-cassazionista-08532423a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
                 </span>
               ),
-              target: "_blank",
-              className: "l663f86vzr-editor_css",
+              className: "l57m8ef96b-editor_css",
             },
             {
-              href: "https://www.facebook.com/marittiello69",
-              name: "link1",
+              name: "link2",
               children: (
                 <span>
-                  <span>
-                    <p>Facebook</p>
-                  </span>
+                  <a
+                    href="https://www.facebook.com/marittiello69"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Facebook
+                  </a>
                 </span>
               ),
-              target: "_blank",
-              className: "l663mkvd54-editor_css",
+              className: "l662w6x64t-editor_css",
             },
           ],
         },
       },
       {
-        name: "block~l6646lihl5a",
+        name: "block3",
         xs: 24,
         md: 6,
-        className: "block l57m9vag6uh-editor_css",
+        className: "block l57m8fdv4gq-editor_css",
         title: {
           children: (
             <span>
@@ -1546,9 +1553,9 @@ export const Footer10DataSource = {
                       <span>
                         <span>
                           <p>
-                            Para más información sobre solicitudes de
-                            reconocimiento de ciudadanía por vía administrativa,
-                            comunicarse con nuestros partners.
+                            Para solicitudes de reconocimiento de ciudadanía por
+                            vía administrativa comunicarse con TANOS, asociación
+                            de relaciones italo-argentinas
                           </p>
                         </span>
                       </span>
@@ -1560,20 +1567,33 @@ export const Footer10DataSource = {
               className: "l663mkvd54-editor_css",
             },
             {
-              href: "https://www.instagram.com/tanos_italia/?igshid=YmMyMTA2M2Y%3D",
+              href: "",
               name: "link0",
               children: (
-                <span>
-                  <span>
-                    <span>
-                      <span>
-                        <p>Tanos Italia (Vía Administrativa)</p>
-                      </span>
-                    </span>
-                  </span>
-                </span>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: 16,
+                  }}
+                >
+                  <Button
+                    type="link"
+                    shape="circle"
+                    icon={<InstagramOutlined />}
+                    href="https://www.instagram.com/tanos_italia/?igshid=YmMyMTA2M2Y%3D"
+                    target="_blank"
+                    style={{ marginRight: 8 }}
+                  />
+                  <Button
+                    type="link"
+                    shape="circle"
+                    icon={<FacebookOutlined />}
+                    href="https://www.facebook.com/TanosItalia"
+                    target="_blank"
+                  />
+                </div>
               ),
-              target: "_blank",
               className: "l663f86vzr-editor_css",
             },
           ],

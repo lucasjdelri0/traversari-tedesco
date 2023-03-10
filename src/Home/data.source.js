@@ -1253,8 +1253,10 @@ export const Content111DataSource = {
             <span>
               <span>
                 <p>
-                  Contáctenos sin demora completando el siguiente formulario y
-                  obtenga la asistencia que necesita para su caso específico.
+                  Contáctenos sin demora llamando al{" "}
+                  <span style={{ fontWeight: "bold" }}>+39 342 190-8539</span> o
+                  bien complete el siguiente formulario y obtenga la asistencia
+                  que necesita para su caso específico.
                 </p>
               </span>
             </span>
@@ -1512,7 +1514,7 @@ export const Footer10DataSource = {
               children: (
                 <span>
                   <a
-                    href="https://www.facebook.com/marittiello69"
+                    href="https://www.facebook.com/profile.php?id=100084331864892"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
